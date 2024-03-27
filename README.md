@@ -1,1 +1,2 @@
-# jon-slva-sandra_ivdra_portfolio
+# Sandra Ivdra Portfolio
+Portfolio & Business Management Web-App for Netherlands Tattoo & Traditional Artist Sandra Ivdra
