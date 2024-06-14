@@ -8,8 +8,13 @@ import tattooLogo from "../assets/logos/tattoo_logo.png";
 
 export default function Home() {
 	const [darkMode, setDarkMode] = useState(false);
+	const [logoState, setLogoState] = useState(false);
 
 	const handleClick = () => {
+		setDarkMode(!darkMode);
+	}
+
+	const handleLogo = () => {
 		setDarkMode(!darkMode);
 	}
 
@@ -37,6 +42,10 @@ export default function Home() {
 
 			<button onClick={handleClick} className="button">
 				{darkMode ? "Light Mode" : "Dark Mode"}
+			</button>
+
+			<button onClick={handleLogo} className="button">
+				{darkMode ? "Art Logo" : "Tattoo Logo"}
 			</button>
 
 		</main>
