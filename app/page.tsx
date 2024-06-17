@@ -7,6 +7,8 @@ import tattooLogo from "../assets/logos/tattoo_logo.png";
 import Image from "next/image";
 const artBg1 = "url(images/art/painting_1/FB_IMG_1712266614230.jpg)"
 const tattooBg1 = "url(images/tattoo/FB_IMG_1712266126903.jpg)"
+const artBg1 = "url(/images/art/painting_1/FB_IMG_1712266614230.jpg)"
+const tattooBg1 = "url(/images/tattoo/FB_IMG_1712266126903.jpg)"
 
 export default function Home() {
 	const [darkMode, setDarkMode] = useState(true);
