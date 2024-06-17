@@ -71,7 +71,7 @@ export default function Home() {
 				</button>
 
 				<button onClick={handleSiteState} className="button">
-					{darkMode ? "Art Logo" : "Tattoo Logo"}
+					{siteState === "tattoo" ? "Tattoo Logo" : "Art Logo"}
 				</button>
 
 			</div>
