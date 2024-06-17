@@ -9,7 +9,7 @@ const artBg1 = "url(images/art/painting_1/FB_IMG_1712266614230.jpg)"
 const tattooBg1 = "url(images/tattoo/FB_IMG_1712266126903.jpg)"
 
 export default function Home() {
-	const [darkMode, setDarkMode] = useState(false);
+	const [darkMode, setDarkMode] = useState(true);
 	const [siteState, setSiteState] = useState('tattoo');
 	const [mousePosition, setMousePosition] = useState({ x: null, y: null });
 
