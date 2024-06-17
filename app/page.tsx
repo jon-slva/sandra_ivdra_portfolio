@@ -1,7 +1,7 @@
 'use client';
 
 import "./page.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import artLogo from "../assets/logos/art_logo.png";
 import tattooLogo from "../assets/logos/tattoo_logo.png";
 import Image from "next/image";
@@ -32,6 +32,13 @@ export default function Home() {
 			setSiteState('tattoo');
 		}
 	}
+
+	useEffect(() => {
+		window.addEventListener("mousemove", updateMousePosition);
+
+		return () => window.removeEventListener("mousemove", updateMousePosition);
+	}, []);
+
 
 	return (
 		<main className="main" style={{
@@ -69,7 +76,15 @@ export default function Home() {
 				<button onClick={handleSiteState} className="button">
 					{darkMode ? "Art Logo" : "Tattoo Logo"}
 				</button>
+
 			</div>
+			<p style={{
+				position: "absolute",
+				bottom: "8px",
+				left: "8px",
+				color: "white"
+
+			}}>Current mouse position: {mousePosition.x}, {mousePosition.y}</p>
 
 		</main>
 	);
