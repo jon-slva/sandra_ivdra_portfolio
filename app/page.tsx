@@ -17,7 +17,7 @@ export default function Home() {
 	const [mousePosition, setMousePosition] = useState({ x: null, y: null });
 
 
-	const updateMousePosition = ev => {
+	const updateMousePosition = (ev: { clientX: any; clientY: any; }) => {
 		setMousePosition({ x: ev.clientX, y: ev.clientY });
 	};
 
