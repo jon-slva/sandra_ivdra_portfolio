@@ -9,21 +9,21 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	gap: 24px;
+	gap: 14px;
 }
 
 .tattoo {
-	height: max-content;
 	color: #fff;
 	z-index: 10;
+	padding-top: 20px;
 
 	@include desktop {}
 
 	&Header {
-		font-size: 70px;
+		font-size: 60px;
 		text-align: center;
 		@include montserrat-font(300, normal);
-		line-height: 70px;
+		line-height: 54px;
 		text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 	}
 }
@@ -31,29 +31,29 @@
 .art {
 	color: #fff;
 	z-index: 10;
+	padding-top: 20px;
 
 	@include desktop {}
 
 	&Header {
-		font-size: 70px;
+		font-size: 60px;
 		text-align: center;
 		@include montserrat-font(500, normal);
-		line-height: 70px;
+		line-height: 54px;
 		text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
 	}
 }
 
 .logoContainer {
-
-	background-color: rgba(231, 231, 231, 0.6);
-	min-width: 278px;
+	background-color: rgba(231, 231, 231, 0.5);
+	width: 260px;
 
 	@include desktop {
 		top: 50%;
 	}
 
 	&Logo {
-		width: 300px;
+		// width: 300px;
 		height: auto;
 	}
 }

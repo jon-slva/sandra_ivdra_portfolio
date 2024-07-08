@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import artLogo from "../assets/logos/art_logo.png";
-import tattooLogo from "../assets/logos/tattoo_logo.png";
+import artLogo from "../assets/logos/art_logo_2.png";
+import tattooLogo from "../assets/logos/tattoo_logo_2.png";
 import DarkModeButtons from "@/components/DarkModeButtons/DarkModeButtons";
 import MousePosition from "@/components/MousePosition/MousePosition";
 import HomeFrame from "@/components/HomeFrame/HomeFrame";
