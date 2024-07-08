@@ -17,7 +17,7 @@ export default function Home() {
 	const [siteState, setSiteState] = useState('tattoo');
 	const [mousePosition, setMousePosition] = useState({ x: null, y: null });
 
-
+	// Function to update mouse position for parallax effect / changing to and from Tattoo and Art
 	const updateMousePosition = (ev: { clientX: any; clientY: any; }) => {
 		setMousePosition({ x: ev.clientX, y: ev.clientY });
 	};
