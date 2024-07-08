@@ -1,10 +1,14 @@
 'use client';
 
-import "./page.scss";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import artLogo from "../assets/logos/art_logo.png";
 import tattooLogo from "../assets/logos/tattoo_logo.png";
-import Image from "next/image";
+import DarkModeButtons from "@/components/DarkModeButtons/DarkModeButtons";
+import MousePosition from "@/components/MousePosition/MousePosition";
+import classes from "./page.module.scss";
+import HomeFrame from "@/components/HomeFrame/HomeFrame";
+
 const artBg1 = "url(images/art/painting_1/sandra-ivdra-art-painting-1-room.jpg)"
 const tattooBg1 = "url(images/tattoo/FB_IMG_1712266126903.jpg)"
 
@@ -30,7 +34,9 @@ export default function Home() {
 		}
 	}
 
+
 	useEffect(() => {
+		// Event listener for mouse position
 		window.addEventListener("mousemove", updateMousePosition);
 
 		return () => window.removeEventListener("mousemove", updateMousePosition);
@@ -38,50 +44,43 @@ export default function Home() {
 
 
 	return (
-		<main className="main" style={{
+		<main className={classes.main} style={{
 			backgroundImage: siteState === 'tattoo' ? tattooBg1 : artBg1
 		}}>
 
-			<section className="tattoo">
-				<h1 className="tattoo__header">
-					Tattoo Artist
-				</h1>
-			</section>
-			<section className="art">
-				<h1 className="art__header">
-					Fine Artist
-				</h1>
-			</section>
-			<section className="logo-container"
+			<HomeFrame siteState={siteState} />
+
+			{siteState === 'tattoo' ? (
+				<div className={classes.tattoo}>
+					<h1 className={classes.tattooHeader}>
+						Tattoo Artist
+					</h1>
+				</div>
+			) : (
+				<div className={classes.art}>
+					<h1 className={classes.artHeader}>
+						Fine Artist
+					</h1>
+				</div>
+			)}
+
+			<section className={classes.logoContainer}
 				style={{
 					filter: `${darkMode ? "invert(100%)" : ""}`
 				}}>
-				<Image src={siteState === 'tattoo' ? tattooLogo : artLogo} alt="" className="logo-container__logo" />
+				<Image src={siteState === 'tattoo' ? tattooLogo : artLogo} alt="" className={classes.logoContainerLogo} />
 			</section>
 
-			<div style={{
-				position: "absolute",
-				right: "8px",
-				top: "8px",
-				display: "flex",
-				gap: "8px"
-			}}>
-				<button onClick={handleClick} className="button">
-					{darkMode ? "Light Mode" : "Dark Mode"}
-				</button>
+			<DarkModeButtons
+				darkMode={darkMode}
+				handleClick={handleClick}
+				siteState={siteState}
+				handleSiteState={handleSiteState}
+			/>
 
-				<button onClick={handleSiteState} className="button">
-					{siteState === "tattoo" ? "Tattoo Logo" : "Art Logo"}
-				</button>
-
-			</div>
-			<p style={{
-				position: "absolute",
-				bottom: "8px",
-				left: "8px",
-				color: "white"
-
-			}}>Current mouse position: {mousePosition.x}, {mousePosition.y}</p>
+			<MousePosition
+				mousePosition={mousePosition}
+			/>
 
 		</main>
 	);

@@ -1,5 +1,58 @@
-.buttonContainer {
+.main {
+	width: 100dvw;
+	height: 100dvh;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	// justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.tattoo {
+	height: 100%;
+	// width: 100%;
+	background-size: cover;
+	// display: flex;
+	color: #fff;
+	flex: 1;
+	margin-top: 150px;
+	z-index: 10;
+
+	&Header {
+		font-size: 80px;
+		text-align: center;
+	}
+}
+
+.art {
+	height: 100%;
+	// width: 100%;
+	background-size: cover;
+	// display: flex;
+	color: #fff;
+	flex: 1;
+	margin-top: 150px;
+	z-index: 10;
+
+	&Header {
+		font-size: 80px;
+		text-align: center;
+	}
+}
+
+
+.logoContainer {
 	position: absolute;
-	right: 8px;
-	top: 8px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(231, 231, 231, 0.8);
+
+	&Logo {
+		width: 300px;
+		height: auto;
+		// box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+		// text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+	}
 }
