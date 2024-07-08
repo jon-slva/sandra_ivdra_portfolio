@@ -1,29 +1,23 @@
 @import "../app/styles/partials/mixins";
 
 .main {
-	width: 100dvw;
-	height: 100dvh;
+	width: 100%;
+	height: 100%;
 	background-size: cover;
 	background-position: center;
 	display: flex;
-	// justify-content: center;
+	flex-direction: column;
 	align-items: center;
-	position: relative;
+	justify-content: center;
+	gap: 24px;
 }
 
 .tattoo {
-	height: 100%;
-	// width: 100%;
-	background-size: cover;
-	// display: flex;
+	height: max-content;
 	color: #fff;
-	flex: 1;
-	margin-top: 220px;
 	z-index: 10;
 
-	@include desktop {
-		margin-top: 300px;
-	}
+	@include desktop {}
 
 	&Header {
 		font-size: 70px;
@@ -35,18 +29,10 @@
 }
 
 .art {
-	height: 100%;
-	// width: 100%;
-	background-size: cover;
-	// display: flex;
 	color: #fff;
-	flex: 1;
-	margin-top: 220px;
 	z-index: 10;
 
-	@include desktop {
-		margin-top: 300px;
-	}
+	@include desktop {}
 
 	&Header {
 		font-size: 70px;
@@ -57,18 +43,18 @@
 	}
 }
 
-
 .logoContainer {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
+
 	background-color: rgba(231, 231, 231, 0.6);
+	min-width: 278px;
+
+	@include desktop {
+		top: 50%;
+	}
 
 	&Logo {
 		width: 300px;
 		height: auto;
-		// box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
 	}
 }
 
