@@ -53,13 +53,13 @@ export default function Home() {
 			{siteState === 'tattoo' ? (
 				<div className={classes.tattoo}>
 					<h1 className={classes.tattooHeader}>
-						Tattoo Artist
+						TATTOO ARTIST
 					</h1>
 				</div>
 			) : (
 				<div className={classes.art}>
 					<h1 className={classes.artHeader}>
-						Fine Artist
+						FINE<br /> <span className={classes.upsideDown}>V</span>RTIST
 					</h1>
 				</div>
 			)}

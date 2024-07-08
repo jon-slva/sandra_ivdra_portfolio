@@ -1,3 +1,5 @@
+@import "../app/styles/partials/mixins";
+
 .main {
 	width: 100dvw;
 	height: 100dvh;
@@ -16,12 +18,19 @@
 	// display: flex;
 	color: #fff;
 	flex: 1;
-	margin-top: 150px;
+	margin-top: 220px;
 	z-index: 10;
 
+	@include desktop {
+		margin-top: 300px;
+	}
+
 	&Header {
-		font-size: 80px;
+		font-size: 70px;
 		text-align: center;
+		@include montserrat-font(300, normal);
+		line-height: 70px;
+		text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 	}
 }
 
@@ -32,12 +41,19 @@
 	// display: flex;
 	color: #fff;
 	flex: 1;
-	margin-top: 150px;
+	margin-top: 220px;
 	z-index: 10;
 
+	@include desktop {
+		margin-top: 300px;
+	}
+
 	&Header {
-		font-size: 80px;
+		font-size: 70px;
 		text-align: center;
+		@include montserrat-font(500, normal);
+		line-height: 70px;
+		text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
 	}
 }
 
@@ -47,12 +63,18 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	background-color: rgba(231, 231, 231, 0.8);
+	background-color: rgba(231, 231, 231, 0.6);
 
 	&Logo {
 		width: 300px;
 		height: auto;
 		// box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
-		// text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 	}
+}
+
+.upsideDown {
+	display: inline-block;
+	transform: rotate(180deg) translateY(-1px);
+	line-height: -10px;
+	text-shadow: -4px -4px 8px rgba(0, 0, 0, 0.4);
 }
