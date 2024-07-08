@@ -1,0 +1,33 @@
+@import './variables';
+@import './fonts';
+
+// Media Queries
+@mixin custom($min-width) {
+	@media (min-width: $min-width) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: $tablet-breakpoint) {
+		@content;
+	}
+}
+
+@mixin desktop-header {
+	@media (min-width: $header-desktop-breakpoint) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: $desktop-breakpoint) {
+		@content;
+	}
+}
+
+@mixin desktop-large {
+	@media (min-width: $desktop-large-breakpoint) {
+		@content;
+	}
+}
