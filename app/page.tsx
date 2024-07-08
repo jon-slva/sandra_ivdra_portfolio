@@ -6,8 +6,8 @@ import artLogo from "../assets/logos/art_logo.png";
 import tattooLogo from "../assets/logos/tattoo_logo.png";
 import DarkModeButtons from "@/components/DarkModeButtons/DarkModeButtons";
 import MousePosition from "@/components/MousePosition/MousePosition";
-import classes from "./page.module.scss";
 import HomeFrame from "@/components/HomeFrame/HomeFrame";
+import classes from "./page.module.scss";
 
 const artBg1 = "url(images/art/painting_1/sandra-ivdra-art-painting-1-room.jpg)"
 const tattooBg1 = "url(images/tattoo/FB_IMG_1712266126903.jpg)"
