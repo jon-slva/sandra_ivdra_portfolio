@@ -31,3 +31,66 @@
 		@content;
 	}
 }
+
+
+
+// FONTS
+@mixin montserrat-font($weight: 400, $style: normal) {
+	font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+	font-weight: $weight;
+	font-style: $style;
+}
+
+
+@mixin body-tablet__desk {
+	font-size: 14px;
+	line-height: 22px;
+	@include montserrat-font;
+}
+
+@mixin h1-tablet__desk {
+	font-size: 33px;
+	@include montserrat-font(800, italic);
+}
+
+@mixin h2-tablet__desk {
+	font-size: 24px;
+	@include montserrat-font(700, normal);
+}
+
+@mixin h3-tablet__desk {
+	font-size: 16px;
+	@include montserrat-font(700, normal);
+}
+
+@mixin p-tablet__desk {
+	font-size: 14px;
+	@include montserrat-font;
+}
+
+
+// Text Styling -- MOBILE
+@mixin body-mobile {
+	font-size: 13px;
+	@include montserrat-font;
+}
+
+@mixin h1-mobile {
+	font-size: 24px;
+	@include montserrat-font(800, italic);
+}
+
+@mixin h2-mobile {
+	font-size: 16px;
+	@include montserrat-font(700, normal);
+}
+
+@mixin h3-mobile {
+	font-size: 16px;
+	@include montserrat-font(700, normal);
+}
+
+@mixin p-mobile {
+	font-size: 13px;
+	@include montserrat-font;
+}

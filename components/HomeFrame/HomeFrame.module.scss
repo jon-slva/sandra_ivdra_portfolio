@@ -1,15 +1,29 @@
+@import "../../app/styles/partials/mixins";
+
 .artFrameLeft {
 	height: 110%;
 	width: auto;
 	position: absolute;
-	left: -60px;
+	left: -8.75rem;
 	z-index: 8;
+	user-select: none;
+	filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.4));
+
+	@include desktop {
+		left: -100px;
+	}
 }
 
 .artFrameRight {
 	height: 110%;
 	width: auto;
 	position: absolute;
-	right: -40px;
+	right: -7.5rem;
 	z-index: 8;
+	user-select: none;
+	filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.4));
+
+	@include desktop {
+		right: -80px;
+	}
 }
